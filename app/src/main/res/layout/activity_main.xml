@@ -1,0 +1,55 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- first, Main View -->
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragments.MainFragment">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_title"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+        <com.jei.widgettest.view.SlidingTabLayout
+            android:id="@+id/stl_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <!-- second, Drawer View, with layout_gravity="left|start".
+        It's a left-to-right drawer.
+    -->
+    <LinearLayout
+        android:id="@+id/ll_left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="60dp"
+            android:padding="10dp"
+            android:text="Hello, World!"
+            android:gravity="left|center_vertical"
+            android:background="#BEBEBE"/>
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>
